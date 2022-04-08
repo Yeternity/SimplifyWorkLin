@@ -93,3 +93,82 @@ java只有值传递？   区别？
 https://www.zhihu.com/question/49136398
 
 当哪个模块被直接执行时，该模块“__name__”的值就是“__main__”
+
+
+
+### Python图像处理
+
+[python 几行代码实现抠图](https://www.cnblogs.com/wsnan/p/13060815.html)
+
+飞桨是一个开源的深度学习平台
+
+GitHub:https://github.com/PaddlePaddle/Paddle
+
+
+
+https://stackoverflow.com/questions/61383950/altering-the-shape-of-an-image-to-take-the-shape-of-an-enclosed-image-with-pytho
+
+https://stackoverflow.com/questions/56575563/how-to-fill-a-image-with-pattern-fabric-on-shirt
+
+https://stackoverflow.com/questions/65007530/extract-only-the-t-shirt-from-an-image-and-remove-all-other-noise-using-opencv-i
+
+https://towardsdatascience.com/python-for-art-blending-two-images-using-opencv-d1fdfd584efd
+
+
+
+https://we.graphics/blog/how-to-use-texture-overlays-on-photos/
+
+
+
+https://blog.csdn.net/qq_42722197/article/details/122019791  色彩阴影调整
+
+
+
+https://stackoverflow.com/questions/66704725/how-to-change-car-body-color-with-opencv-on-python-or-javascript
+
+https://stackoverflow.com/questions/69023789/change-range-of-colors-in-an-image-using-python
+
+#### Blend Modes
+
+https://github.com/flrs/blend_modes
+
+安装
+
+```bash
+pip install blend_modes
+```
+
+封装了GIMP的库
+
+### OpenCV
+
+#### 安装nummy和opencv
+
+```
+pip install numpy opencv-python
+```
+
+创建图像
+
+https://blog.csdn.net/zhy29563/article/details/107382109
+
+
+
+【OpenCV】HSV颜色识别-HSV基本颜色分量范围
+
+https://blog.csdn.net/taily_duan/article/details/51506776
+
+
+
+消除锯齿（羽化）
+
+https://stackoverflow.com/questions/58097626/how-can-i-soften-just-the-edges-of-this-image
+
+
+
+### skimage
+
+```bash
+pip install -U scikit-image
+```
+
