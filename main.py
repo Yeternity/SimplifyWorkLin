@@ -13,6 +13,7 @@ def rename(file, newname):
         return False
     return True
 
+# 根据文件名中的数字由小到大排序
 def sort(obj):
     try:
         obj.sort(key=lambda x: int(re.search(r'\d+', x).group(0)))
