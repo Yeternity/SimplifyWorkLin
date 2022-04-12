@@ -1,5 +1,7 @@
 # SimplifyWorkLin
 
+## Python
+
 ### PyCharm设置默认换行符
 
 Settings-> Code Style->Line separator
@@ -96,49 +98,51 @@ https://www.zhihu.com/question/49136398
 
 
 
-### Python图像处理
+### python os
 
-[python 几行代码实现抠图](https://www.cnblogs.com/wsnan/p/13060815.html)
-
-飞桨是一个开源的深度学习平台
-
-GitHub:https://github.com/PaddlePaddle/Paddle
+https://zhuanlan.zhihu.com/p/52359623
 
 
+
+### python教程
+
+https://www.runoob.com/python3/python3-tutorial.html
+
+
+
+## 图像处理实例
+
+贴图思路
+
+https://stackoverflow.com/questions/65046692/how-to-put-an-image-on-a-t-shirt-using-python-opencv
+
+
+
+mask、resize实例
 
 https://stackoverflow.com/questions/61383950/altering-the-shape-of-an-image-to-take-the-shape-of-an-enclosed-image-with-pytho
 
-https://stackoverflow.com/questions/56575563/how-to-fill-a-image-with-pattern-fabric-on-shirt
-
-https://stackoverflow.com/questions/65007530/extract-only-the-t-shirt-from-an-image-and-remove-all-other-noise-using-opencv-i
-
-https://towardsdatascience.com/python-for-art-blending-two-images-using-opencv-d1fdfd584efd
 
 
+如何在照片上使用纹理叠加（blend mode）
 
 https://we.graphics/blog/how-to-use-texture-overlays-on-photos/
 
 
 
-https://blog.csdn.net/qq_42722197/article/details/122019791  色彩阴影调整
-
-
+通过改变alpha通道改变车子的颜色
 
 https://stackoverflow.com/questions/66704725/how-to-change-car-body-color-with-opencv-on-python-or-javascript
 
-https://stackoverflow.com/questions/69023789/change-range-of-colors-in-an-image-using-python
 
-#### Blend Modes
 
-https://github.com/flrs/blend_modes
+去除png图片多余透明部分，crop the  object
 
-安装
+https://stackoverflow.com/questions/46273309/using-opencv-how-to-remove-non-object-in-transparent-image
 
-```bash
-pip install blend_modes
-```
 
-封装了GIMP的库
+
+## 用到的第三方库
 
 ### OpenCV
 
@@ -147,6 +151,12 @@ pip install blend_modes
 ```
 pip install numpy opencv-python
 ```
+
+官方教程
+
+https://docs.opencv.org/4.0.0/index.html
+
+
 
 创建图像
 
@@ -166,9 +176,55 @@ https://stackoverflow.com/questions/58097626/how-can-i-soften-just-the-edges-of-
 
 
 
+resize
+
+https://www.jianshu.com/p/0deabe02a379
+
+
+
+将透明背景png图片贴到另一张背景图片
+
+https://linuxtut.com/en/923aefb052f217f2f3c5/
+
+
+
+面向初学者的 OpenCV-Python 教程
+
+http://codec.wang/#/opencv/
+
+
+
+### Blend Modes
+
+混合multiply模式，保留了衣服的阴影褶皱
+
+https://github.com/flrs/blend_modes
+
+安装
+
+```bash
+pip install blend_modes
+```
+
+封装了GIMP的库
+
+https://gitlab.gnome.org/GNOME/gimp/-/blob/master/app/operations/layer-modes-legacy/gimpoperationmultiplylegacy.c
+
+ 文档
+
+https://blend-modes.readthedocs.io/en/latest/index.html   
+
+维基百科——混合模式
+
+https://en.wikipedia.org/wiki/Blend_modes
+
+
+
 ### skimage
 
 ```bash
 pip install -U scikit-image
 ```
+
+使用了skimage.exposure.rescale_intensity完成去锯齿
 

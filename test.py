@@ -1,1 +1,4 @@
-print(13//2)
+y, x = 0
+
+print(x)
+print(y)
