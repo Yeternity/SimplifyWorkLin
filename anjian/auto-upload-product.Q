@@ -29,127 +29,127 @@ SetupOCXFile=
 'rte:anjian 2014.06.19549
 'display resolution:1920*1080
 'Encoding:GB 2312
-'end of line sequence:CRLF  (to upload giuthub, convert to LF)
+'end of line sequence:CRLF(to upload giuthub, convert to LF)
 
 
 
-'ï¿½ï¿½Ð¡ï¿½Ó³Ù£ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì°ï¿½ï¿½ï¿½Ö®ï¿½ï¿½
+'×îÐ¡ÑÓ³Ù£¬Ò»°ãÓÃÓÚÊó±êµã»÷£¬¼üÅÌ°´¼üÖ®ºó
 Function delay_min()
 	Delay 1000
 End Function
 
-'ï¿½Ðµï¿½ï¿½Ó³ï¿½
+'ÖÐµÈÑÓ³Ù
 Function delay_mid()
 	Delay 3000
 End Function
 
-'ï¿½ï¿½ï¿½ï¿½Ó³Ù£ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½Ò³
+'×î´óÑÓ³Ù£¬Ò»°ãÓÃÓÚÓÐÍøÂçÇëÇóµÄ²Ù×÷ÓÃ£¬Èç´ò¿ªÐÂµÄÍøÒ³
 Function delay_max()
 	Delay 15000
 End Function
 
 
 
-'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½ï¿½Â¼
+'´ò¿ªä¯ÀÀÆ÷£¬´ò¿ªÍøÕ¾²¢µÇÂ¼
 Function open_web()
-	'ï¿½ò¿ª¹È¸ï¿½
+	'´ò¿ª¹È¸è
 	MoveTo 218, 1054
 	LeftClick 1
 	Call delay_mid()
 	
-	'ï¿½ï¿½ali
+	'´ò¿ªali
 	MoveTo 962, 782
 	LeftClick 1
 	Call delay_max()
 	
-	'ï¿½ï¿½Â¼
+	'µÇÂ¼
 	MoveTo 1349, 576
 	LeftClick 1
 	Call delay_max()
 End Function
 
 
-'ï¿½ò¿ªµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½
+'´ò¿ªµ½·¢²¼ÀàËÆ½çÃæ
 Function publish_similar_product()
 	
-	'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	'²úÆ·¹ÜÀí
 	MoveTo 136, 478
 	LeftClick 1
 	Call delay_max()
 	
-	'ï¿½à¼­
+	'±à¼­
 	MoveTo 1709, 962
 	LeftClick 1
 	Call delay_mid()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½Æ²ï¿½Æ·
+	'´ò¿ªÀàËÆ²úÆ·
 	MoveTo 1731, 595
 	LeftClick 1
 	Call delay_max()
 
 End Function
 
-'ï¿½ï¿½È¡ï¿½ï¿½Æ·ï¿½ï¿½Ï¢
+'»ñÈ¡²úÆ·ÐÅÏ¢
 Function get_product_info(e_cnt)
-	'ï¿½ï¿½excel
-	Call Plugin.Office.OpenXls("D:\test\ï¿½ï¿½Æ·ï¿½ï¿½ï¿½â¼°ï¿½Ø¼ï¿½ï¿½ï¿½.xlsx")
+	'´ò¿ªexcel
+	Call Plugin.Office.OpenXls("D:\test\²úÆ·±êÌâ¼°¹Ø¼ü´Ê.xlsx")
 	
-	'ï¿½ï¿½Æ·ï¿½ÍºÅ£ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Ðµï¿½1ï¿½Ð£ï¿½
+	'²úÆ·ÐÍºÅ£¨µÚ2¸ö±íµ¥£¬µÚiÐÐµÚ1ÁÐ£©
 	product_model_number = Plugin.Office.ReadXls(excel_sheet_cnt, e_cnt, 1)
 	
-	'ï¿½ï¿½Æ·ï¿½ï¿½ð£¨µï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Ðµï¿½2ï¿½Ð£ï¿½
+	'²úÆ·Àà±ð£¨µÚ2¸ö±íµ¥£¬µÚiÐÐµÚ2ÁÐ£©
 	product_kind = Plugin.Office.ReadXls(excel_sheet_cnt, e_cnt, 2)
 	
-	'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Ðµï¿½3ï¿½Ð£ï¿½
+	'²úÆ·Ãû³Æ£¨µÚ2¸ö±íµ¥£¬µÚiÐÐµÚ3ÁÐ£©
     product_name = Plugin.Office.ReadXls(excel_sheet_cnt, e_cnt, 3)
     
-    'ï¿½ï¿½Æ·ï¿½Ø¼ï¿½ï¿½Ö£ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Ðµï¿½4-6ï¿½Ð£ï¿½
+    '²úÆ·¹Ø¼ü×Ö£¨µÚ2¸ö±íµ¥£¬µÚiÐÐµÚ4-6ÁÐ£©
     product_keyword_1 = Plugin.Office.ReadXls(excel_sheet_cnt, e_cnt, 4)
     product_keyword_2 = Plugin.Office.ReadXls(excel_sheet_cnt, e_cnt, 5)
     product_keyword_3 = Plugin.Office.ReadXls(excel_sheet_cnt, e_cnt, 6)
     
-    'ï¿½ï¿½Æ·Í¼Æ¬Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Ðµï¿½7ï¿½Ð£ï¿½
+    '²úÆ·Í¼Æ¬Â·¾¶£¨µÚ2¸ö±íµ¥£¬µÚiÐÐµÚ7ÁÐ£©
     product_image_path = Plugin.Office.ReadXls(excel_sheet_cnt, e_cnt, 7)
     
-    'ï¿½Ø±ï¿½excel
+    '¹Ø±Õexcel
 	Plugin.Office.CloseXls
 End Function
 
 
-'ï¿½ï¿½Õµï¿½Ç°Ñ¡ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½
+'Çå¿Õµ±Ç°Ñ¡¿òÖÐµÄÄÚÈÝ
 Function clear_content()
-	'ctrl+a Ñ¡ï¿½Ð¿ï¿½ï¿½ï¿½È«ï¿½ï¿½
+	'ctrl+a Ñ¡ÖÐ¿òÖÐÈ«²¿
 	KeyDown 17, 1
 	KeyPress 65, 1
 	KeyUp 17, 1
 	Call delay_min()
 	
-	'É¾ï¿½ï¿½
+	'É¾³ý
 	KeyPress "BackSpace", 1
 	Call delay_min()
 End Function
 
 
 
-'ï¿½Þ¸Ä²ï¿½Æ·ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
+'ÐÞ¸Ä²úÆ·Ãû³Æ£¨»ù±¾ÐÅÏ¢£©
 Function modify_product_name()
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
+	'Êó±êµã»÷¡°²úÆ·Ãû³Æ¡±µÄÑ¡¿ò
 	MoveTo 613, 589
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½ï¿½Õµï¿½Ç°Ñ¡ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½
+	'Çå¿Õµ±Ç°Ñ¡¿òÖÐµÄÄÚÈÝ
 	Call clear_content()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	'ÊäÈë²úÆ·Ãû³Æ
 	SayString product_name
 	Call delay_min()
 End Function
 
 
-'ï¿½Þ¸Ä²ï¿½Æ·ï¿½Ø¼ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
+'ÐÞ¸Ä²úÆ·¹Ø¼ü×Ö£¨»ù±¾ÐÅÏ¢£©
 Function modify_product_keyword()
-	'ï¿½Þ¸Äµï¿½Ò»ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½
+	'ÐÞ¸ÄµÚÒ»¸ö¹Ø¼ü´Ê
 	MoveTo 529, 652
 	LeftClick 1
 	Call delay_min()
@@ -159,13 +159,13 @@ Function modify_product_keyword()
 	SayString product_keyword_1
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½Õ°ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½Å¼È»ï¿½ï¿½ï¿½ÖµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µ¥»ú¿Õ°×ÇøÓò£¬È¥³ý£¨Å¼È»³öÏÖµÄ£©ÏÂÀ­¿ò
 	MoveTo 193, 641
 	LeftClick 1
 	Call delay_min()
 	
 	
-	'ï¿½Þ¸ÄµÚ¶ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½
+	'ÐÞ¸ÄµÚ¶þ¸ö¹Ø¼ü´Ê
 	MoveTo 458, 705
 	LeftClick 1
 	Call delay_min()
@@ -175,13 +175,13 @@ Function modify_product_keyword()
 	SayString product_keyword_2
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½Õ°ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½Å¼È»ï¿½ï¿½ï¿½ÖµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µ¥»ú¿Õ°×ÇøÓò£¬È¥³ý£¨Å¼È»³öÏÖµÄ£©ÏÂÀ­¿ò
 	MoveTo 193, 641
 	LeftClick 1
 	Call delay_min()
 	
 	
-	'ï¿½Þ¸Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½
+	'ÐÞ¸ÄµÚÈý¸ö¹Ø¼ü´Ê
 	MoveTo 495, 758
 	LeftClick 1
 	Call delay_min()
@@ -191,7 +191,7 @@ Function modify_product_keyword()
 	SayString product_keyword_3
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½Õ°ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½Å¼È»ï¿½ï¿½ï¿½ÖµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µ¥»ú¿Õ°×ÇøÓò£¬È¥³ý£¨Å¼È»³öÏÖµÄ£©ÏÂÀ­¿ò
 	MoveTo 193, 641
 	LeftClick 1
 	Call delay_min()
@@ -199,13 +199,13 @@ Function modify_product_keyword()
 End Function
 
 
-'ï¿½Þ¸Ä²ï¿½Æ·ï¿½ÍºÅ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
+'ÐÞ¸Ä²úÆ·ÐÍºÅ£¨»ù±¾ÐÅÏ¢£©
 Function modify_product_model_number()
-	'ï¿½ï¿½ï¿½Â»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½Î»ï¿½ï¿½
+	'ÏòÏÂ»¬¶¯µ½ÊÊºÏÎ»ÖÃ
 	MouseWheel -12 
 	Call delay_min()
 	
-	'ï¿½Þ¸Ä²ï¿½Æ·ï¿½Íºï¿½
+	'ÐÞ¸Ä²úÆ·ÐÍºÅ
 	MoveTo 416, 528
 	LeftClick 1
 	Call delay_min()
@@ -215,19 +215,19 @@ Function modify_product_model_number()
 	SayString product_model_number
 	Call delay_min()
 	
-	'ï¿½Ö¸ï¿½Ä¬ï¿½ï¿½Î»ï¿½ï¿½
+	'»Ö¸´Ä¬ÈÏÎ»ÖÃ
 	MouseWheel 12 
 	Call delay_min()
 End Function
 
 
-'ï¿½Þ¸Ä²ï¿½Æ·ï¿½ï¿½ï¿½Æ£ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½
+'ÐÞ¸Ä²úÆ·Ãû³Æ£¨×Ô¶¨ÒåÊôÐÔ£©
 Function modify_customized_product_name()
-	'ï¿½ï¿½ï¿½Â»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½Î»ï¿½ï¿½
+	'ÏòÏÂ»¬¶¯µ½ÊÊºÏÎ»ÖÃ
 	MouseWheel -12 
 	Call delay_min()
 
-	'ï¿½Þ¸ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	'ÐÞ¸Ä×Ô¶¨Òå²úÆ·Ãû³Æ
 	MoveTo 686, 899
 	LeftClick 1
 	Call delay_min()
@@ -237,121 +237,121 @@ Function modify_customized_product_name()
 	SayString product_name
 	Call delay_min()
 	
-	'ï¿½Ö¸ï¿½Ä¬ï¿½ï¿½Î»ï¿½ï¿½
+	'»Ö¸´Ä¬ÈÏÎ»ÖÃ
 	MouseWheel 12 
 	Call delay_min()
 End Function
 
 
-'ï¿½Úµï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬
+'ÔÚµ¯³öµÄ´°¿ÚÌí¼ÓÍ¼Æ¬
 Function add_product_image()
-	'ï¿½ï¿½ï¿½Â·ï¿½ï¿½
+	'µã»÷Â·¾¶
 	MoveTo 867, 190
 	LeftClick 1
 	Call delay_min()
 	
-	'É¾ï¿½ï¿½Ô­ï¿½ï¿½Â·ï¿½ï¿½
+	'É¾³ýÔ­±¾Â·¾¶
 	KeyPress "BackSpace", 1
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
+	'ÊäÈëÐÂÂ·¾¶
 	SayString product_image_path
 	Call delay_min()
 	
-	'ï¿½Ø³ï¿½È·ï¿½ï¿½Â·ï¿½ï¿½
+	'»Ø³µÈ·ÈÏÂ·¾¶
 	KeyPress "Enter", 1
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½Æ·Í¼Æ¬Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½Ñ¡ï¿½Ð£ï¿½
+	'µã»÷²úÆ·Í¼Æ¬Î»ÖÃ£¨·½±ãºóÃæÈ«²¿Ñ¡ÖÐ£©
 	MoveTo 903, 551
 	LeftClick 1
 	Call delay_min()
 	
 	
-	'ctrl+a Ñ¡ï¿½ï¿½È«ï¿½ï¿½Í¼Æ¬
+	'ctrl+a Ñ¡ÖÐÈ«²¿Í¼Æ¬
 	KeyDown 17, 1
 	KeyPress 65, 1
 	KeyUp 17, 1
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½ò¿ª£ï¿½ï¿½Ï´ï¿½È«ï¿½ï¿½Í¼Æ¬ï¿½ï¿½
+	'µã»÷´ò¿ª£¨ÉÏ´«È«²¿Í¼Æ¬£©
 	MoveTo 1061, 855
 	LeftClick 1
 	Call delay_max()
 End Function
 
 
-'ï¿½ï¿½ï¿½Ó²ï¿½Æ·Í¼Æ¬ï¿½ï¿½ï¿½Ø»ï¿½
+'Ìí¼Ó²úÆ·Í¼Æ¬ºÍÊØ»¤
 Function add_product_image_and_daemon()
-	'ï¿½ï¿½ï¿½Â»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½Î»ï¿½ï¿½
+	'ÏòÏÂ»¬¶¯µ½ÊÊºÏÎ»ÖÃ
 	MouseWheel -24 
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷ä¯ÀÀ
 	MoveTo 348, 538
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½Úµï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬
+	'ÔÚµ¯³öµÄ´°¿ÚÌí¼ÓÍ¼Æ¬
 	Call add_product_image()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ï¿½6ï¿½ï¿½Í¼Æ¬ï¿½ï¿½
-	'ï¿½ï¿½1ï¿½ï¿½
+	'Ìí¼ÓÊØ»¤£¨6¸öÍ¼Æ¬£©
+	'µÚ1¸ö
 	MoveTo 355, 855
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½ï¿½2ï¿½ï¿½
+	'µÚ2¸ö
 	MoveTo 525, 830
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½ï¿½3ï¿½ï¿½
+	'µÚ3¸ö
 	MoveTo 665, 832
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½ï¿½4ï¿½ï¿½
+	'µÚ4¸ö
 	MoveTo 808, 830
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½ï¿½5ï¿½ï¿½
+	'µÚ5¸ö
 	MoveTo 951, 829
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½ï¿½6ï¿½ï¿½
+	'µÚ6¸ö
 	MoveTo 1084, 827
 	LeftClick 1
 	Call delay_min()
 	
 	
-	'ï¿½Ö¸ï¿½Ä¬ï¿½ï¿½Î»ï¿½ï¿½
+	'»Ö¸´Ä¬ÈÏÎ»ÖÃ
 	MouseWheel 24
 	Call delay_min()
 End Function
 
 
-'ï¿½Þ¸Ä²ï¿½Æ·ï¿½ï¿½ï¿½Æ£ï¿½specificationï¿½ï¿½
+'ÐÞ¸Ä²úÆ·Ãû³Æ£¨specification£©
 Function modify_product_name_spec()
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
+	'Êó±êµã»÷¡°²úÆ·Ãû³Æ¡±µÄÑ¡¿ò
 	MoveTo 1076, 262
 	LeftDoubleClick 1
 	Call delay_min()
 	
-	'ï¿½ï¿½Õµï¿½Ç°Ñ¡ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½
+	'Çå¿Õµ±Ç°Ñ¡¿òÖÐµÄÄÚÈÝ
 	Call clear_content()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	'ÊäÈë²úÆ·Ãû³Æ
 	SayString product_name
 	Call delay_min()
 End Function
 
 
-'ï¿½Þ¸Ä²ï¿½Æ·ï¿½ÍºÅ£ï¿½specificationï¿½ï¿½
+'ÐÞ¸Ä²úÆ·ÐÍºÅ£¨specification£©
 Function modify_product_model_number_spec()
-	'ï¿½Þ¸Ä²ï¿½Æ·ï¿½Íºï¿½
+	'ÐÞ¸Ä²úÆ·ÐÍºÅ
 	MoveTo 1006, 340
 	LeftDoubleClick 1
 	Call delay_min()
@@ -363,19 +363,19 @@ Function modify_product_model_number_spec()
 End Function
 
 
-'ï¿½Þ¸Ä²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+'ÐÞ¸Ä²úÆ·ÃèÊö
 Function modify_product_description_spec()
-	'ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+	'µã»÷Í¼Æ¬ÃèÊöµÄÎ»ÖÃ
 	MoveTo 948, 1004
 	LeftClick 1
 	Call delay_min()
 	
-	'É¾ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½Í¼Æ¬
+	'É¾³ýµÚ1ÕÅÍ¼Æ¬
 	MoveTo 1825, 380
 	LeftClick 1
 	Call delay_min()
 	
-	'É¾ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½Í¼Æ¬
+	'É¾³ýºó5ÕÅÍ¼Æ¬
 	MoveTo 1852, 349
 	LeftClick 1
 	Call delay_min()
@@ -388,21 +388,21 @@ Function modify_product_description_spec()
 	LeftClick 1
 	Call delay_min()
 
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½
+	'µã»÷±¾µØÉÏ´«
 	MoveTo 1650, 423
 	LeftClick 1
 	Call delay_mid()
 	
-	'ï¿½ï¿½ï¿½ï¿½Ï´ï¿½Í¼Æ¬
+	'µã»÷ÉÏ´«Í¼Æ¬
 	MoveTo 440, 490
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½Úµï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬
+	'ÔÚµ¯³öµÄ´°¿ÚÌí¼ÓÍ¼Æ¬
 	Call add_product_image()
 	Call delay_max()
 	
-	'ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½Ï´ï¿½
+	'µã»÷È·ÈÏÉÏ´«
 	MoveTo 405, 757
 	LeftClick 1
 	Call delay_mid()
@@ -410,7 +410,7 @@ End Function
 
 
 Function search_highlight(search_content)
-	'ctrl+fï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¼ï¿½
+	'ctrl+f£¬¹È¸èËÑË÷¿ì½Ý¼ü
 	KeyDown 17, 1
 	KeyPress 70, 1
 	KeyUp 17, 1
@@ -424,7 +424,7 @@ Function search_highlight(search_content)
 End Function
 
 
-'ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+'µã»÷¹È¸èä¯ÀÀÆ÷ËÑË÷ÎÄ×Öºó¸ßÁÁµÄÇøÓò
 Function click_highlighted_area()
 	FindColor 8,92,1892,1020,"3296FF",intX,intY
 	If intX > 0 And intY > 0 Then 
@@ -435,33 +435,33 @@ Function click_highlighted_area()
 End Function
 
 
-'ÎªÍ¼Æ¬ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Æ·ï¿½Ð±ï¿½Ò³"
+'ÎªÍ¼Æ¬Ìí¼ÓµêÄÚÀàÄ¿ÉÌÆ·ÁÐ±íÒ³"
 Function add_kind_tag()
-	'ï¿½ï¿½ï¿½"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Æ·ï¿½Ð±ï¿½Ò³"
-	Call search_highlight("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Æ·ï¿½Ð±ï¿½Ò³")
+	'µã»÷"µêÄÚÀàÄ¿ÉÌÆ·ÁÐ±íÒ³"
+	Call search_highlight("µêÄÚÀàÄ¿ÉÌÆ·ÁÐ±íÒ³")
 	Call click_highlighted_area()
 	
-	'Ñ¡ï¿½ï¿½ï¿½ï¿½Ì·ï¿½ï¿½ï¿½
+	'Ñ¡ÔñµêÆÌ·Ö×é
 	MoveTo 686, 320
 	LeftClick 1
 	Call delay_min()
 	
 	
-	'ï¿½ï¿½ï¿½"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Æ·ï¿½Ð±ï¿½Ò³"
+	'µã»÷"µêÄÚÀàÄ¿ÉÌÆ·ÁÐ±íÒ³"
 	Call search_highlight(product_kind)
 	Call click_highlighted_area()
 	
-	'ï¿½ï¿½ï¿½È·ï¿½Ï£ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ì·ï¿½ï¿½é£©
+	'µã»÷È·ÈÏ£¨Ñ¡ÔñµêÆÌ·Ö×é£©
 	MoveTo 1450, 883
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷Ô¤ÀÀÁ´½Ó
 	MoveTo 496, 419
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½È·ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Æ·ï¿½Ð±ï¿½Ò³ï¿½ï¿½
+	'µã»÷È·ÈÏ£¨µêÄÚÀàÄ¿ÉÌÆ·ÁÐ±íÒ³£©
 	MoveTo 1444, 888
 	LeftClick 1
 	Call delay_mid()
@@ -469,181 +469,181 @@ End Function
 
 
 
-'ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
+'Ìí¼ÓÍ¼Æ¬Á´½Ó
 Function add_image_attach()
-	'ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚ1¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	MoveTo 1782, 447
 	LeftClick 1
 	Call delay_min()
 	Call add_kind_tag()
 
-	'ï¿½ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚ2¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	MoveTo 1783, 568
 	LeftClick 1
 	Call delay_min()
 	Call add_kind_tag()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½3ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚ3¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	MoveTo 1780, 697
 	LeftClick 1
 	Call delay_min()
 	Call add_kind_tag()
 	
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½4ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚ4¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	MoveTo 1783, 821
 	LeftClick 1
 	Call delay_min()
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ò£¬·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥
+	'µã»÷Ìø³öµÄÐ¡¿ò£¬·½±ã¹öÂÖÍÏÏÂÈ¥
 	MoveTo 1635, 885
 	LeftClick 1
 	Delay 1000
-	'ï¿½Ïµï¿½ï¿½×²ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Æ·ï¿½Ð±ï¿½Ò³ï¿½ï¿½
+	'ÍÏµ½µ×²¿£¬Â¶³ö¡°µêÄÚÀàÄ¿ÉÌÆ·ÁÐ±íÒ³¡±
 	MouseWheel - 50 
 	Delay 1000
 	Call add_kind_tag()
 	
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚ5¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	MoveTo 1781, 944
 	LeftClick 1
 	Call delay_min()
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ò£¬·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥
+	'µã»÷Ìø³öµÄÐ¡¿ò£¬·½±ã¹öÂÖÍÏÏÂÈ¥
 	MoveTo 1637, 1005
 	LeftClick 1
 	Delay 1000
-	'ï¿½Ïµï¿½ï¿½×²ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Æ·ï¿½Ð±ï¿½Ò³ï¿½ï¿½
+	'ÍÏµ½µ×²¿£¬Â¶³ö¡°µêÄÚÀàÄ¿ÉÌÆ·ÁÐ±íÒ³¡±
 	MouseWheel - 50 
 	Delay 1000
 	Call add_kind_tag()	
 	
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Ä£ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷¶àÍ¼Ä£¿éµÄ¹ö¶¯Ìõ
 	MoveTo 1864, 283
 	LeftClick 1
 	Delay 1000
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'¹ö¶¯µ½µ×²¿£¬´ÓÏÂÍùÉÏÔÙÌí¼ÓÒ»±éÁ´½Ó
 	MouseWheel - 50 
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚµ¹ÊýµÚ1¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	MoveTo 1786, 949
 	LeftClick 1
 	Call delay_min()
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ò£¬·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥
+	'µã»÷Ìø³öµÄÐ¡¿ò£¬·½±ã¹öÂÖÍÏÏÂÈ¥
 	MoveTo 1648, 1008
 	LeftClick 1
 	Delay 1000
-	'ï¿½Ïµï¿½ï¿½×²ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Æ·ï¿½Ð±ï¿½Ò³ï¿½ï¿½
+	'ÍÏµ½µ×²¿£¬Â¶³ö¡°µêÄÚÀàÄ¿ÉÌÆ·ÁÐ±íÒ³¡±
 	MouseWheel - 50 
 	Delay 1000
 	Call add_kind_tag()
 	
-	'ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚµ¹ÊýµÚ2¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	MoveTo 1782, 824
 	LeftClick 1
 	Call delay_min()
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ò£¬·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥
+	'µã»÷Ìø³öµÄÐ¡¿ò£¬·½±ã¹öÂÖÍÏÏÂÈ¥
 	MoveTo 1673, 881
 	LeftClick 1
 	Delay 1000
-	'ï¿½Ïµï¿½ï¿½×²ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Æ·ï¿½Ð±ï¿½Ò³ï¿½ï¿½
+	'ÍÏµ½µ×²¿£¬Â¶³ö¡°µêÄÚÀàÄ¿ÉÌÆ·ÁÐ±íÒ³¡±
 	MouseWheel - 50 
 	Delay 1000
 	Call add_kind_tag()
 	
-	'ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½3ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚµ¹ÊýµÚ3¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	MoveTo 1783, 704
 	LeftClick 1
 	Call delay_min()
 	Call add_kind_tag()
 	
-	'ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½4ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚµ¹ÊýµÚ4¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	//MoveTo 1780, 574
 	//LeftClick 1
 	//Call delay_min()
 	//Call add_kind_tag()
 	
-	'ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚµ¹ÊýµÚ5¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	//MoveTo 1788, 451
 	//LeftClick 1
 	//Call delay_min()
 	//Call add_kind_tag()
 	
-	'ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½6ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷µÚµ¹ÊýµÚ6¸öÍ¼Æ¬Ìí¼ÓÁ´½Ó
 	//MoveTo 1778, 324
 	//LeftClick 1
 	//Call delay_min()
 	//Call add_kind_tag()
 	
-	'ï¿½Ø±Õ¹È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'¹Ø±Õ¹È¸èä¯ÀÀÆ÷µÄËÑË÷À¸
 	MoveTo 1756, 112
 	LeftClick 1
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷±£´æ
 	MoveTo 1682, 122
 	LeftClick 1
 	Call delay_mid()
 	
-	'ï¿½ï¿½ï¿½ï¿½à¼­ï¿½ï¿½ï¿½
+	'µã»÷±à¼­Íê³É
 	MoveTo 1807, 124
 	LeftClick 1
 	Call delay_mid()
 	
-	'ï¿½ï¿½ï¿½È·ï¿½ï¿½Í¬ï¿½ï¿½
+	'µã»÷È·¶¨Í¬²½
 	MoveTo 1317, 615
 	LeftClick 1
 	Call delay_mid()
 End Function
 
 
-'ï¿½Þ¸Ä²ï¿½Æ·ï¿½ï¿½Ï¸Ëµï¿½ï¿½
+'ÐÞ¸Ä²úÆ·ÏêÏ¸ËµÃ÷
 Function modify_specification()
-	'ï¿½ï¿½ï¿½Â»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½Î»ï¿½ï¿½
+	'ÏòÏÂ»¬¶¯µ½ÊÊºÏÎ»ÖÃ
 	MouseWheel -34 
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½à¼­
+	'µã»÷ÎÒÒª±à¼­
 	MoveTo 1166, 559
 	LeftDoubleClick 1
 	Call delay_max()
 	
-	'ï¿½Þ¸Ä²ï¿½Æ·ï¿½ï¿½ï¿½Æ£ï¿½specificationï¿½ï¿½
+	'ÐÞ¸Ä²úÆ·Ãû³Æ£¨specification£©
 	Call modify_product_name_spec()
 	
-	'ï¿½Þ¸Ä²ï¿½Æ·ï¿½ÍºÅ£ï¿½specificationï¿½ï¿½
+	'ÐÞ¸Ä²úÆ·ÐÍºÅ£¨specification£©
 	Call modify_product_model_number_spec()
 	
-	'ï¿½Þ¸Ä²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	'ÐÞ¸Ä²úÆ·ÃèÊö
 	Call modify_product_description_spec()
 	
-	'ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
+	'Ìí¼ÓÍ¼Æ¬Á´½Ó
 	Call add_image_attach()
 	
 	
-	'ï¿½Ö¸ï¿½Ä¬ï¿½ï¿½Î»ï¿½ï¿½
+	'»Ö¸´Ä¬ÈÏÎ»ÖÃ
 	MouseWheel 34
 	Call delay_min()
 End Function
 
 
 Function save_submit_comeback()
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½×²ï¿½
+	'¹ö¶¯µ½Ò³Ãæµ×²¿
 	MouseWheel -100
 	Call delay_min()
 
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	'µã»÷±£´æ
 	MoveTo 636, 770
 	LeftClick 1
 	Call delay_max()
 	
-	'ï¿½Øµï¿½ï¿½ï¿½Ò³ï¿½æ£¨ï¿½ï¿½ï¿½My Alibabaï¿½ï¿½
+	'»Øµ½Ö÷Ò³Ãæ£¨µã»÷My Alibaba£©
 	MoveTo 376, 119
 	LeftClick 1
 	Call delay_mid()
 	
-	'ï¿½ï¿½ï¿½ï¿½ë¿ª
+	'µã»÷Àë¿ª
 	MoveTo 1090, 203
 	LeftClick 1
 	Call delay_max()
@@ -652,11 +652,11 @@ End Function
 
 
 Function submit()
-	'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½×²ï¿½
+	'¹ö¶¯µ½Ò³Ãæµ×²¿
 	MouseWheel -100
 	Call delay_min()
 	
-	'ï¿½ï¿½ï¿½ï¿½á½»
+	'µã»÷Ìá½»
 	MoveTo 852, 773
 	LeftClick 1
 	Call delay_max()
@@ -665,14 +665,14 @@ End Function
 
 
 
-'==========ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½==========
-' Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+'==========ÅäÖÃÏî==========
+' Òª±éÀúµÄexcelµÄÊ×ÐÐ
 excel_rcnt_start = 18
-' Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½excelï¿½ï¿½Î²ï¿½ï¿½
+' Òª±éÀúµÄexcelµÄÎ²ÐÐ
 excel_rcnt_end = 19
-' Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½excelï¿½ÄµÚ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+' Òª±éÀúµÄexcelµÄµÚ¼¸¸ö±íµ¥
 excel_sheet_cnt = 2
-'==========ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½==========
+'==========ÅäÖÃÏî==========
 
 
 
