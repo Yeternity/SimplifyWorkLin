@@ -354,7 +354,8 @@ def do_puzzle_fb(dir_input, dir_output):
         # 每6个分一组
         if (i - 1) % 6 == 0:
             newdir = dir_output + r'/' + 'res_' + str(group_cnt)
-            os.mkdir(newdir)
+            if not os.path.exists(newdir):
+                os.mkdir(newdir)
             group_cnt += 1
 
         # 生成组图
